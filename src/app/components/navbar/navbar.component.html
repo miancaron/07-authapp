@@ -19,8 +19,16 @@
         </ul>
 
         <span class="navbar-text">
-        Navbar text with an inline element
-      </span>
+
+            <button class="btn btn-outline-primary" (click)="auth.login()" *ngIf="!auth.loggedIn">
+                Ingresar
+            </button>
+
+            <button class="btn btn-outline-danger" (click)="auth.logout()" *ngIf="auth.loggedIn">
+                Salir
+            </button>
+
+        </span>
 
     </div>
 
