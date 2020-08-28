@@ -1,1 +1,11 @@
-<p>protegida works!</p>
+<h1>Perfil de usuario</h1>
+
+<!-- async espera a que el observable responda y el resultado se guarda en profile para que luego
+sea más fácil usarlo con el "| json" -->
+<pre *ngIf="auth.userProfile$ | async as profile">
+    <code>
+        <!-- usar el pipe json para convertir el objeto profile (objeto con los datos del perfil)
+        en un json -->
+        {{ profile | json }}
+    </code>
+</pre>
